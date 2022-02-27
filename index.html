@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="shared.css">
+</head>
+
+<body>
+    <header>
+        <h1>BUTTONS</h1>
+    </header>
+
+<section class="button-stylings">
+    <button onClick = colorChange('red')>
+        one
+    </button>
+    <button onClick = colorChange('orange')>
+        two
+    </button>
+    <button onClick = colorChange('yellow')>
+        three
+    </button>
+    <button onClick = colorChange('green')>
+        four
+    </button>
+    <button onClick = colorChange('blue')>
+        five
+    </button>
+    <button onClick = colorChange('purple')>
+        six
+    </button>
+</section>
+
+
+
+<script>
+const coloring = document.querySelector('h1');
+function colorChange(color) {
+    coloring.style.color = color;
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+
