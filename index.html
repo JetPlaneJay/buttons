@@ -11,29 +11,71 @@
 <body>
     <header>
         <h1>BUTTONS</h1>
-    </header>
+
 
 <section class="button-stylings">
     <button onClick = colorChange('red')>
-        one
+        red
     </button>
     <button onClick = colorChange('orange')>
-        two
+        orange
     </button>
     <button onClick = colorChange('yellow')>
-        three
+        yellow
     </button>
     <button onClick = colorChange('green')>
-        four
+        green
     </button>
     <button onClick = colorChange('blue')>
-        five
+        blue
     </button>
     <button onClick = colorChange('purple')>
-        six
+        purple
     </button>
 </section>
 
+<section class="buttonStylings2">
+    
+<button onClick="addImage()">
+    1: Add an image
+</button >
+
+
+<button onClick="addText()" id="button2">
+    2: Add text
+</button>
+
+<button onClick="addRandom()">
+    3: text outside of the box!
+</button>
+
+
+<button onClick="addNumbers()">
+    4
+</button>
+<button>
+    5
+</button>
+<button>
+    6
+</button>
+<div id="random" >
+
+</div>
+<h1>Calculator</h1>
+<div>
+  <label for="item">Enter a number in each field:</label>
+  <input type="text" id="item1">
+  <input type="text" id="item2">
+  <button id="hello">Add numbers</button>
+</div>
+<h2>Results</h2>
+<ul class="results">
+</ul>
+
+
+
+</section>
 
 
 <script>
@@ -42,6 +84,56 @@ function colorChange(color) {
     coloring.style.color = color;
 }
 
+function addImage() {
+const imagining = document.createElement("IMG");
+imagining.setAttribute("src", "2-26-0.jpg");
+imagining.setAttribute("width", "50");
+imagining.setAttribute("height", "50")
+  document.body.appendChild(imagining);
+
+}
+
+
+function addText() {
+const explaining = document.createElement("p");
+const explanation = document.createTextNode("Clicking the second button causes this explanation to occur")
+explaining.appendChild(explanation)
+
+const idk = document.getElementById("button2");
+idk.appendChild(explaining);
+}
+
+
+
+
+function addRandom() {
+const random = document.createElement("p");
+const text = document.createTextNode("hello!")
+random.appendChild(text)
+const wherever = document.getElementById("random");
+wherever.appendChild(random);
+}
+
+
+//I copied all of the math
+const input1  = document.getElementById('item1');
+const input2  = document.getElementById('item2');
+const button  = document.getElementById('hello');
+const results = document.querySelector('.results');
+
+button.onclick = (e) => {
+  const num1 = parseInt(input1.value, 10);
+  input1.value = '';
+  const num2 = parseInt(input2.value, 10);
+  input2.value = '';
+
+  // Here I am clueless
+  const element = document.createElement('li');
+  element.textContent = `${num1} + ${num2} = ${num1 + num2}`;
+  results.append(element);
+
+  input1.focus();
+}
 
 
 
